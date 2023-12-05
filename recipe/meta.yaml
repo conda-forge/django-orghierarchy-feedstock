@@ -1,5 +1,5 @@
 {% set name = "django-orghierarchy" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-orghierarchy-{{ version }}.tar.gz
-  sha256: de23e6a094da49568714976abb03b34e48d7c6c3b966379f9b01fce90c4b241a
+  sha256: 5634da7c9ec70a951607f38a4cbbf8d953464ef56b8b6a7ded85bfecd696b536
 
 build:
   noarch: python
