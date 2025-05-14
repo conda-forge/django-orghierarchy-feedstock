@@ -1,18 +1,18 @@
 {% set name = "django-orghierarchy" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-orghierarchy-{{ version }}.tar.gz
-  sha256: 5634da7c9ec70a951607f38a4cbbf8d953464ef56b8b6a7ded85bfecd696b536
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 754bf0ac0d0c248639104bb4716816e7c0a5ea2d907a2f3e7f1f3909b3048111
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - django >=2.2
+    - django >=4.2,<5
     - django-mptt
     - djangorestframework
     - requests
