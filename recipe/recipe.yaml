@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: django-orghierarchy
-  version: "0.6.1"
+  version: "0.6.2"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 2cb6c301bfc603501dc4d8c43503a14ddeb2604d59896c49522179a28dcc9e85
+  sha256: 2038480d29d95864973f1d5488fef72c54ba7eb183cb7f0c54408742ccb24578
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
