@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: django-orghierarchy
-  version: "0.6.2"
+  version: 0.7.0
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 2038480d29d95864973f1d5488fef72c54ba7eb183cb7f0c54408742ccb24578
+  sha256: 8cdaa2c2f6493ce95181f59d3cbb7ba6ad78c07919cb0f0290d98e179d92a8e5
 
 build:
   number: 0
@@ -25,12 +25,11 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }},<4.0
-    - django >=4.2
+    - django >=5.2
     - django-mptt
     - djangorestframework
     - requests
     - swapper
-
 tests:
   - python:
       imports:
