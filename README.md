@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: Reusable Django application for hierarchical organizations.
 
+Reusable Django application for hierarchical organizations.
+
 Current build status
 ====================
 
